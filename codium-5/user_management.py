@@ -7,7 +7,7 @@ class UserManager:
     def __init__(self):
         self.users = {}
 
-    def add_user(self, username, password):
+    def add_user(self, *, username, password):
         if len(self.users) >= MAX_USERS:
             return False
         if username in self.users:
